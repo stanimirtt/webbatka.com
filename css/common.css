@@ -11,7 +11,6 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -20,27 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-main .logo {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  position: fixed;
-  top: 50%;
-  left: 44%;
-}
-
-footer .icons {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  position: fixed;
-  top: 90%;
-  left: 50%;
-}
 
 /* Logo styling */
 
@@ -137,10 +115,6 @@ footer .icons {
   font-family: 'Teko';
   text-transform: uppercase;
   font-size: 3.3em;
-  position: absolute;
-  top: 33%;
-  left: 100%;
-  width: 80%;
 }
 
 .rounded-rect {
@@ -227,53 +201,4 @@ footer .icons {
 
 .icon:hover, .icon:hover:before, .icon:hover:after {
   background: hsla(0, 0%, 100%, 0.6);
-}
-
-
-.fb, .fb:before, .fb:after {
-  background: hsl(220, 44%, 41%);
-}
-
-.fb:hover, .fb:hover:before, .fb:hover:after {
-  background: hsl(220, 44%, 21%);
-}
-
-.gp, .gp:before, .gp:after {
-  background: hsl(3, 67%, 57%);
-}
-
-.gp:hover, .gp:hover:before, .gp:hover:after {
-  background: hsl(3, 67%, 37%);
-}
-
-.gh, .gh:before, .gh:after {
-  background: hsl(232.7, 19.1%, 33.9%)
-}
-
-.gh:hover, .gh:hover:before, .gh:hover:after {
-  background: hsl(232.7, 19.1%, 13.9%)
-}
-
-.yt, .yt:before, .yt:after {
-  background: hsl(360, 64%, 50%);
-}
-
-.yt:hover, .yt:hover:before, .yt:hover:after {
-  background: hsl(360, 64%, 30%);
-}
-
-.li, .li:before, .li:after {
-  background: hsl(199, 100%, 36%);
-}
-
-.li:hover, .li:hover:before, .li:hover:after {
-  background: hsl(199, 100%, 16%);
-}
-
-.en, .en:before, .en:after {
-  background: hsl(232.7, 19.1%, 33.9%)
-}
-
-.en:hover, .en:hover:before, .en:hover:after {
-  background: hsl(232.7, 19.1%, 13.9%)
 }
