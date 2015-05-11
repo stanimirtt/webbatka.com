@@ -5,221 +5,231 @@
 
 /* Layout */
 
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, 
-pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, 
-samp, small, strike, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s,
+samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
 }
 
 body {
-  background: #A4B1C4;
-  -webkit-font-smoothing: antialiased;
+    background: #A4B1C4;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
-  width: 100%;
+    width: 100%;
 }
 
 #logo {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  padding: 0 0 2% 0;
-  width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0 0 2% 0;
+    width: 100%;
 }
 
 .icons {
-  margin: 0 auto;
-  width: 20%;
+    margin: 0 auto;
+    width: 20%;
 }
 
 /* Logo styling */
 
 .punch-animation {
-  animation: animationFrames linear .2s;
-  animation-iteration-count: 2;
-  animation-delay: 2s;
-  transform-origin: 50% 50%;
-  -webkit-animation: animationFrames linear .2s;
-  -webkit-animation-iteration-count: 2;
-  -webkit-animation-delay: 2s;
-  -webkit-transform-origin: 50% 50%;
-  -moz-animation: animationFrames linear .2s;
-  -moz-animation-iteration-count: 2;
-  -moz-animation-delay: 2s;
-  -moz-transform-origin: 50% 50%;
-  -o-animation: animationFrames linear .2s;
-  -o-animation-iteration-count: 2;
-  -o-animation-delay: 2s;
-  -o-transform-origin: 50% 50%;
-  -ms-animation: animationFrames linear .2s;
-  -ms-animation-iteration-count: 2;
-  -ms-animation-delay: 2s;
-  -ms-transform-origin: 50% 50%;
+    animation: animationFrames linear .2s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    transform-origin: 50% 50%;
+    -webkit-animation: animationFrames linear .2s;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-delay: 2s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: animationFrames linear .2s;
+    -moz-animation-iteration-count: 2;
+    -moz-animation-delay: 2s;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: animationFrames linear .2s;
+    -o-animation-iteration-count: 2;
+    -o-animation-delay: 2s;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: animationFrames linear .2s;
+    -ms-animation-iteration-count: 2;
+    -ms-animation-delay: 2s;
+    -ms-transform-origin: 50% 50%;
 }
 
-@keyframes animationFrames{
-  0% {
-    transform: scaleX(0.80) scaleY(0.80);
-  }
-  50% {
-    transform: scaleX(1.50) scaleY(1.50);
-  }
-  100% {
-    transform: scaleX(1.00) scaleY(1.00);
-  }
+@keyframes animationFrames {
+    0% {
+        transform: scaleX(0.80) scaleY(0.80);
+    }
+
+    50% {
+        transform: scaleX(1.50) scaleY(1.50);
+    }
+
+    100% {
+        transform: scaleX(1.00) scaleY(1.00);
+    }
 }
 
-@-moz-keyframes animationFrames{
-  0% {
-    -moz-transform: scaleX(0.80) scaleY(0.80);
-  }
-  50% {
-    -moz-transform: scaleX(1.50) scaleY(1.50);
-  }
-  100% {
-    -moz-transform: scaleX(1.00) scaleY(1.00);
-  }
+@-moz-keyframes animationFrames {
+    0% {
+        -moz-transform: scaleX(0.80) scaleY(0.80);
+    }
+
+    50% {
+        -moz-transform: scaleX(1.50) scaleY(1.50);
+    }
+
+    100% {
+        -moz-transform: scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform: scaleX(0.80) scaleY(0.80);
-  }
-  50% {
-    -webkit-transform: scaleX(1.50) scaleY(1.50);
-  }
-  100% {
-    -webkit-transform: scaleX(1.00) scaleY(1.00);
-  }
+    0% {
+        -webkit-transform: scaleX(0.80) scaleY(0.80);
+    }
+
+    50% {
+        -webkit-transform: scaleX(1.50) scaleY(1.50);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-o-keyframes animationFrames {
-  0% {
-    -o-transform: scaleX(0.80) scaleY(0.80);
-  }
-  50% {
-    -o-transform: scaleX(1.50) scaleY(1.50);
-  }
-  100% {
-    -o-transform: scaleX(1.00) scaleY(1.00);
-  }
+    0% {
+        -o-transform: scaleX(0.80) scaleY(0.80);
+    }
+
+    50% {
+        -o-transform: scaleX(1.50) scaleY(1.50);
+    }
+
+    100% {
+        -o-transform: scaleX(1.00) scaleY(1.00);
+    }
 }
 
 @-ms-keyframes animationFrames {
-  0% {
-    -ms-transform: scaleX(0.80) scaleY(0.80);
-  }
-  50% {
-    -ms-transform: scaleX(1.50) scaleY(1.50);
-  }
-  100% {
-    -ms-transform: scaleX(1.00) scaleY(1.00);
-  }
+    0% {
+        -ms-transform: scaleX(0.80) scaleY(0.80);
+    }
+
+    50% {
+        -ms-transform: scaleX(1.50) scaleY(1.50);
+    }
+
+    100% {
+        -ms-transform: scaleX(1.00) scaleY(1.00);
+    }
 }
 
 .first {
-  display: inline-block;
+    display: inline-block;
 }
 
 .text {
-  color: #FFF;
-  font-weight: 600;
-  font-family: 'Teko';
-  text-transform: uppercase;
-  line-height: 6em;
-  font-size: 3.3em;
+    color: #FFF;
+    font-weight: 600;
+    font-family: 'Teko';
+    text-transform: uppercase;
+    line-height: 6em;
+    font-size: 3.3em;
 }
 
 .rounded-rect {
-  border-radius: 10px;
-  background: #FFF;
-  width: 4em;
-  height: 12em;
-  margin: 1em;
-  float: left;
-  transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
+    border-radius: 10px;
+    background: #FFF;
+    width: 4em;
+    height: 12em;
+    margin: 1em;
+    float: left;
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
 }
 
 .smaller {
-  margin: 3em 1em 1em 1em;
-  height: 10em;
+    margin: 3em 1em 1em 1em;
+    height: 10em;
 }
 
 .smallest {
-  margin: 5em 1em 1em 1em;
-  height: 8em;
+    margin: 5em 1em 1em 1em;
+    height: 8em;
 }
 
 .last-rect {
-  clear: left;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  margin: -4em 0 0 3.5em;
+    clear: left;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    margin: -4em 0 0 3.5em;
 }
 
 /* Social styling */
 
 .icons i {
-  display: block;
-  font-size: 24px;
-  line-height: 40px; 
-  width: 40px;
-  text-align: center;
+    display: block;
+    font-size: 24px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
 }
 
 .icons a {
-  text-decoration: none;
-  color: #A4B1C4;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 12px;
+    text-decoration: none;
+    color: #A4B1C4;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 12px;
 }
 
-.icons a, .icons a:before, .icons a:after {
-  transition: all 0.35s;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -ms-transition: all 0.35s;
-}
+    .icons a, .icons a:before, .icons a:after {
+        transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        -moz-transition: all 0.35s;
+        -ms-transition: all 0.35s;
+    }
 
-.icons a:hover { 
-  transform: scale(1.25); 
-  -webkit-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  border-radius: 100%; 
-}
+        .icons a:hover {
+            transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+            -o-transform: scale(1.25);
+            -moz-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+            border-radius: 100%;
+        }
 
-.icons a:hover:before, .icons a:hover:after { 
-  transform: scale(0.5);
-  -webkit-transform: scale(0.5);
-  -o-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  -ms-transform: scale(0.5);   
-}
+            .icons a:hover:before, .icons a:hover:after {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                -o-transform: scale(0.5);
+                -moz-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+            }
 
 .icon, .icon:before, .icon:after {
-  background: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 100%);
 }
 
-.icon:hover, .icon:hover:before, .icon:hover:after {
-  background: hsla(0, 0%, 100%, 0.6);
-}
+    .icon:hover, .icon:hover:before, .icon:hover:after {
+        background: hsla(0, 0%, 100%, 0.6);
+    }
