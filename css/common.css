@@ -19,9 +19,6 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     background: #A4B1C4;
     -webkit-font-smoothing: antialiased;
-}
-
-main {
     width: 100%;
 }
 
