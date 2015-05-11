@@ -32,13 +32,13 @@ main {
 footer {
   position: fixed;
   bottom: 0;
-  padding: 0 0 1% 0;
+  padding: 0 0 2% 0;
   width: 100%;
 }
 
 .icons {
   margin: 0 auto;
-  width: 25%;
+  width: 20%;
 }
 
 /* Logo styling */
