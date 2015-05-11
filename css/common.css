@@ -1,4 +1,5 @@
 /* Import font */
+
 @import url(http://fonts.googleapis.com/css?family=Teko:400,600);
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
@@ -20,21 +21,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-
 main {
-  padding: 15% 0 0;
+  width: 100%;
 }
+
+#logo {
+  margin: 0 auto;
+}
+
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 38%;
-    padding: 0 0 1% 0;
+  position: fixed;
+  bottom: 0;
+  padding: 0 0 1% 0;
+  width: 100%;
+}
+
+.icons {
+  margin: 0 auto;
+  width: 25%;
 }
 
 /* Logo styling */
@@ -131,6 +135,7 @@ footer {
   font-weight: 600;
   font-family: 'Teko';
   text-transform: uppercase;
+  line-height: 6em;
   font-size: 3.3em;
 }
 
@@ -149,12 +154,12 @@ footer {
 }
 
 .smaller {
-  margin-top: 3em;
+  margin: 3em 1em 1em 1em;
   height: 10em;
 }
 
 .smallest {
-  margin-top: 5em;
+  margin: 5em 1em 1em 1em;
   height: 8em;
 }
 
@@ -165,8 +170,7 @@ footer {
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  margin-top: -4em;
-  margin-left: 3.5em;
+  margin: -4em 0 0 3.5em;
 }
 
 /* Social styling */
