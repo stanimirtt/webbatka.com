@@ -36,6 +36,30 @@ footer {
 .icons {
     margin: 0 auto;
     width: 24%;
+    padding: 0 0 0 10%;
+}
+
+.fixed-left {
+    position: fixed;
+    width: auto;
+    right: 0;
+    top: 50%;
+}
+
+/* Video */
+
+video#bgvid {
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background: url(snowboarding.jpg) no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(8px);
 }
 
 /* Logo styling */
@@ -184,7 +208,7 @@ footer {
 
 .icons i {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
     width: 28px;
     text-align: center;
