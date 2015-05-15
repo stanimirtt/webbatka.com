@@ -31,10 +31,10 @@
     <video autoplay loop poster="snowboarding.jpg" id="bgvid">
         <source src="snowboarding.mp4" type="video/mp4">
     </video>
-    <div class="icons fixed-left">
-        <a href="#" class="icon"><i class="icon_boxer"></i></a>
-        <a href="#" class="icon"><i class="icon_extreme1"></i></a>
-        <a href="#" class="icon"><i class="fa fa-pause"></i></a>
+    <div class="icons fixed-left bigger">
+        <a href="#" class="icon"><i class="icon_boxer" id="vidboxer"></i></a>
+        <a href="#" class="icon"><i class="icon_extreme1" id="vidshowboarder"></i></a>
+        <a href="#" class="icon"><i class="fa fa-pause" id="vidpause"></i></a>
     </div>
     <div id="logo">
         <div class="punch-animation">
@@ -55,5 +55,50 @@
             <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
         </div>
     </footer>
+    <script>
+        var vid = document.getElementById("bgvid"),
+            pauseButton = document.getElementById("vidpause"),
+            boxerButton = document.getElementById("vidboxer"),
+            showboarderButton = document.getElementById("vidshowboarder");
+
+        function vidFade() {
+            vid.classList.add("stopfade");
+        }
+
+        function changeVid(videoElement, src) {
+            var sources = videoElement.getElementsByTagName('source');
+
+            videoElement.attributes.poster = src + ".jpg";
+
+            sources[0].src = src + ".mp4";
+            videoElement.load();
+        }
+
+        vid.addEventListener('ended', function() {
+            // only functional if "loop" is removed
+            vid.pause();
+            // to capture IE10
+            vidFade();
+        });
+
+        pauseButton.addEventListener("click", function() {
+            vid.classList.toggle("stopfade");
+            if (vid.paused) {
+                vid.play();
+                pauseButton.className = "fa fa-pause";
+            } else {
+                vid.pause();
+                pauseButton.className = "fa fa-play";
+            }
+        });
+
+        boxerButton.addEventListener("click", function() {
+            changeVid(vid, "boxing");
+        });
+
+        showboarderButton.addEventListener("click", function() {
+            changeVid(vid, "snowboarding");
+        });
+    </script>
 </body>
 </html>

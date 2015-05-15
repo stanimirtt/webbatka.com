@@ -62,6 +62,14 @@ video#bgvid {
     -webkit-filter: blur(8px);
 }
 
+video#bgvid { 
+    transition: 1s opacity; 
+}
+
+.stopfade { 
+    opacity: .5; 
+}
+
 /* Logo styling */
 
 .punch-animation {
@@ -212,6 +220,12 @@ video#bgvid {
     line-height: 28px;
     width: 28px;
     text-align: center;
+}
+
+.bigger i {
+    font-size: 20px;
+    line-height: 34px;
+    width: 34px;
 }
 
 .icons a {
