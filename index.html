@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <video autoplay loop poster="snowboarding.jpg" id="bgvid">
+    <video autoplay loop poster="snowboarding.jpg" id="bgvid" muted>
         <source src="snowboarding.mp4" type="video/mp4">
     </video>
     <div class="icons fixed-left bigger">
@@ -90,14 +90,20 @@
                 vid.pause();
                 pauseButton.className = "fa fa-play";
             }
+
+            return false;
         });
 
         boxerButton.addEventListener("click", function() {
             changeVid(vid, "boxing");
+
+            return false;
         });
 
         showboarderButton.addEventListener("click", function() {
             changeVid(vid, "snowboarding");
+
+            return false;
         });
     </script>
 </body>
