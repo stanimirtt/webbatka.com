@@ -45,6 +45,16 @@
     }
 }
 
+@media screen and (max-device-width: 800px) {
+    body { 
+        background: url(snowboarding.jpg) #000 no-repeat center center fixed; 
+    }
+
+    #bgvid { 
+        display: none; 
+    }
+}
+
 @media (min-width: 768px) {
     #logo {
         width: 70%;

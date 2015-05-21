@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html itemtype="http://schema.org/Person">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanimir Todorov - Software Developer and more...</title>
+    <!-- Meta tags -->
+    <title>Web Batka = Coding + Snowboarding + Punching</title>
 
+    <meta name="description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun." />
+    <link rel="author" href="https://plus.google.com/+StanimirTodorov" />
+
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="Web Batka = Coding + Snowboarding + Punching" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content="http://webbatka.com/webbatka.png" />
+    <meta property="og:url" content="http://webbatka.com" />
+    <meta property="og:description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun." />
+
+    <!-- Google+ meta tags -->
+    <meta itemprop="name" content="Web Batka = Coding + Snowboarding + Punching">
+    <meta itemprop="description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun.">
+    <meta itemprop="image" content="http://webbatka.com/webbatka.png">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/common.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/webbatka.css" type="text/css" />
 
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -27,6 +46,15 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <video autoplay loop poster="snowboarding.jpg" id="bgvid" muted>
+        <source src="snowboarding.mp4" type="video/mp4">
+    </video>
+    <div class="icons fixed-left bigger">
+        <!-- <a href="#" class="icon"><i class="fa fa-code"></i></a> -->
+        <a href="#" class="icon"><i class="icon_boxer" id="vidboxer"></i></a>
+        <a href="#" class="icon"><i class="icon_extreme1" id="vidshowboarder"></i></a>
+        <a href="#" class="icon"><i class="fa fa-pause" id="vidpause"></i></a>
+    </div>
     <div id="logo">
         <div class="punch-animation">
             <div class="rounded-rect"></div>
@@ -46,5 +74,63 @@
             <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
         </div>
     </footer>
+    <script>
+        var vid = document.getElementById("bgvid"),
+            pauseButton = document.getElementById("vidpause"),
+            boxerButton = document.getElementById("vidboxer"),
+            showboarderButton = document.getElementById("vidshowboarder");
+
+        function vidFade() {
+            vid.classList.add("stopfade");
+        }
+
+        function changeVid(videoElement, src) {
+            var sources = videoElement.getElementsByTagName('source');
+
+            videoElement.attributes.poster = src + ".jpg";
+
+            sources[0].src = src + ".mp4";
+            videoElement.load();
+
+            toggleVideo();
+            vid.classList.remove("stopfade");
+        }
+
+        function toggleVideo() {
+            vid.classList.toggle("stopfade");
+            
+            if (vid.paused) {
+                vid.play();
+                pauseButton.className = "fa fa-pause";
+            } else {
+                vid.pause();
+                pauseButton.className = "fa fa-play";
+            }
+        }
+
+        vid.addEventListener('ended', function() {
+            // only functional if "loop" is removed
+            vid.pause();
+            // to capture IE10
+            vidFade();
+        });
+
+        pauseButton.addEventListener("click", function() {
+            toggleVideo();
+            return false;
+        });
+
+        boxerButton.addEventListener("click", function() {
+            changeVid(vid, "boxing");
+
+            return false;
+        });
+
+        showboarderButton.addEventListener("click", function() {
+            changeVid(vid, "snowboarding");
+
+            return false;
+        });
+    </script>
 </body>
 </html>
