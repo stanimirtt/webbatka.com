@@ -51,7 +51,7 @@
         <source src="snowboarding.mp4" type="video/mp4">
     </video>
     <div class="icons fixed-left bigger">
-        <a href="#" class="icon"><i class="fa fa-code"></i></a>
+        <!-- <a href="#" class="icon"><i class="fa fa-code"></i></a> -->
         <a href="#" class="icon"><i class="icon_boxer" id="vidboxer"></i></a>
         <a href="#" class="icon"><i class="icon_extreme1" id="vidshowboarder"></i></a>
         <a href="#" class="icon"><i class="fa fa-pause" id="vidpause"></i></a>
@@ -92,6 +92,20 @@
 
             sources[0].src = src + ".mp4";
             videoElement.load();
+
+            toggleVideo();
+        }
+
+        function toggleVideo() {
+            vid.classList.toggle("stopfade");
+            
+            if (vid.paused) {
+                vid.play();
+                pauseButton.className = "fa fa-pause";
+            } else {
+                vid.pause();
+                pauseButton.className = "fa fa-play";
+            }
         }
 
         vid.addEventListener('ended', function() {
@@ -102,15 +116,7 @@
         });
 
         pauseButton.addEventListener("click", function() {
-            vid.classList.toggle("stopfade");
-            if (vid.paused) {
-                vid.play();
-                pauseButton.className = "fa fa-pause";
-            } else {
-                vid.pause();
-                pauseButton.className = "fa fa-play";
-            }
-
+            toggleVideo();
             return false;
         });
 
