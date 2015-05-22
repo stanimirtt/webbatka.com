@@ -16,34 +16,132 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     vertical-align: baseline;
 }
 
-body {
-    background: #A4B1C4;
+html, body {
     -webkit-font-smoothing: antialiased;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    background: #A4B1C4;
+    float: right;
+    opacity: .7;
+    width: 36.2%;
+    height: auto;
+    min-width: 36.2%; 
+    min-height: 100%;
+}
+
+/* Header layout */
+
+header {
+    width: 100%;
+    height: 61.8%;
+    min-width: 100%; 
+    min-height: 61.8%;
 }
 
 #logo {
+    width: 61.8%;
     margin: 0 auto;
 }
+
+nav {
+    width: 61.8%;
+    margin: 45px auto;
+}
+
+/* Nav layout */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin: 15px 0 15px 0;
+}
+
+.nav-hint {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Teko';
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.button {
+    padding: 5px;
+    background: #B193FB;
+    text-transform: uppercase;
+    font-family: 'Teko';
+    font-weight: 400;
+    max-width: 30%;
+}
+
+.button, .button:before, .button:after {
+        transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        -moz-transition: all 0.35s;
+        -ms-transition: all 0.35s;
+    }
+
+        .button:hover {
+            transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+            -o-transform: scale(1.25);
+            -moz-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+        }
+
+            .button:hover:before, .button:hover:after {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                -o-transform: scale(0.5);
+                -moz-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+            }
+
+.button .icon {
+    padding: 7px;
+}
+
+.button a {
+    text-decoration: none;
+    color: #FFF;
+    letter-spacing: 1px;
+    display:block;
+}
+
+/* Article Layout */
+
+article {
+    background: #F1F0F6;
+    color: #9DA0A9;
+    padding: 10px;
+    margin: 45px;
+}
+
+/* Footer layout */
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    padding: 0 0 2% 0;
-    width: 100%;
+    width: 36.2%;
+    min-width: 36.2%;
 }
 
-.icons {
+footer .icons {
+    width: 36.2%;
     margin: 0 auto;
-    width: 24%;
-    padding: 0 0 0 10%;
+    padding: 0 0 1% 0;
 }
 
-.fixed-left {
-    position: fixed;
-    width: auto;
-    right: 0;
-    top: 50%;
+.controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 /* Video */
@@ -174,8 +272,8 @@ video#bgvid {
     font-weight: 600;
     font-family: 'Teko';
     text-transform: uppercase;
-    line-height: 6em;
-    font-size: 3.3em;
+    line-height: 9.6em;
+    font-size: 2em;
 }
 
 .rounded-rect {
@@ -222,12 +320,6 @@ video#bgvid {
     text-align: center;
 }
 
-.bigger i {
-    font-size: 20px;
-    line-height: 34px;
-    width: 34px;
-}
-
 .icons a {
     text-decoration: none;
     color: #A4B1C4;
@@ -261,6 +353,7 @@ video#bgvid {
                 -ms-transform: scale(0.5);
             }
 
+/* Icon styles */
 .icon, .icon:before, .icon:after {
     background: hsl(0, 0%, 100%);
 }
@@ -268,3 +361,49 @@ video#bgvid {
     .icon:hover, .icon:hover:before, .icon:hover:after {
         background: hsla(0, 0%, 100%, 0.6);
     }
+
+
+    .button .icon, .button .icon:before, .button .icon:after {
+        background: hsl(257, 93%, 78%);
+    }
+
+/* Controls styles */
+.controls i {
+    display: block;
+    font-size: 24px;
+    line-height: 34px;
+    width: 34px;
+    text-align: center;
+}
+
+.controls a {
+    text-decoration: none;
+    color: #FFF;
+    display: inline-block;
+    margin: 5px;
+}
+
+    .controls a, .controls a:before, .controls a:after {
+        transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        -moz-transition: all 0.35s;
+        -ms-transition: all 0.35s;
+    }
+
+        .controls a:hover {
+            transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+            -o-transform: scale(1.25);
+            -moz-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+            border-radius: 100%;
+        }
+
+            .controls a:hover:before, .controls a:hover:after {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                -o-transform: scale(0.5);
+                -moz-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+            }

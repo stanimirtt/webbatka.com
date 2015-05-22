@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tags -->
-    <title>Web Batka = Coding + Snowboarding + Punching</title>
+    <title>Web Batka = Coding + Snowboarding + Boxing</title>
 
     <meta name="description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun." />
     <link rel="author" href="https://plus.google.com/+StanimirTodorov" />
 
     <!-- Facebook meta tags -->
-    <meta property="og:title" content="Web Batka = Coding + Snowboarding + Punching" />
+    <meta property="og:title" content="Web Batka = Coding + Snowboarding + Boxing" />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content="http://webbatka.com/webbatka.png" />
+    <meta property="og:image" content="http://webbatka.com/images/webbatka.png" />
     <meta property="og:url" content="http://webbatka.com" />
     <meta property="og:description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun." />
 
     <!-- Google+ meta tags -->
-    <meta itemprop="name" content="Web Batka = Coding + Snowboarding + Punching">
+    <meta itemprop="name" content="Web Batka = Coding + Snowboarding + Boxing">
     <meta itemprop="description" content="Stanimir Todorov (a.k.a Web Batka) - A Software Developer with passion to build web apps and having a fun.">
-    <meta itemprop="image" content="http://webbatka.com/webbatka.png">
+    <meta itemprop="image" content="http://webbatka.com/images/webbatka.png">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/common.css" type="text/css" />
@@ -46,91 +46,48 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <video autoplay loop poster="snowboarding.jpg" id="bgvid" muted>
-        <source src="snowboarding.mp4" type="video/mp4">
+    <video autoplay loop poster="posters/snowboarding.jpg" id="bgvid" muted>
+        <source src="videos/snowboarding.mp4" type="video/mp4">
     </video>
-    <div class="icons fixed-left bigger">
-        <!-- <a href="#" class="icon"><i class="fa fa-code"></i></a> -->
-        <a href="#" class="icon"><i class="icon_boxer" id="vidboxer"></i></a>
-        <a href="#" class="icon"><i class="icon_extreme1" id="vidshowboarder"></i></a>
-        <a href="#" class="icon"><i class="fa fa-pause" id="vidpause"></i></a>
+    <div class="controls">
+        <a href="#"><i class="fa fa-pause" id="vidpause"></i></a>
     </div>
-    <div id="logo">
-        <div class="punch-animation">
-            <div class="rounded-rect"></div>
-            <div class="rounded-rect smaller"></div>
-            <div class="rounded-rect smallest"></div>
-            <div class="rounded-rect last-rect"></div>
-        </div>
-        <h1 class="text">web batka</h1>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <div class="punch-animation">
+                    <div class="rounded-rect"></div>
+                    <div class="rounded-rect smaller"></div>
+                    <div class="rounded-rect smallest"></div>
+                    <div class="rounded-rect last-rect"></div>
+                </div>
+                <h1 class="text">web batka</h1>
+            </div>
+        </header>
+        <nav>
+            <span class="nav-hint">load another video</span>
+            <ul>
+                <!-- <a href="#" class="icon"><i class="fa fa-code"></i></a> -->
+                <li id="vidshowboarder" class="button"><a href="#"><i class="icon icon_extreme1"></i> snowboarding</a></li>
+                <li id="vidboxer" class="button"><a href="#"><i class="icon icon_boxer"></i> boxing</a></li>
+            </ul>
+        </nav>
+        <!--
+        <article>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </article>
+        -->
+        <footer>
+            <div class="icons">
+                <a href="https://www.facebook.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.google.com/+StanimirTodorov" target="_blank" class="icon"><i class="fa fa-google-plus"></i></a>
+                <a href="https://github.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-github"></i></a>
+                <a href="http://bg.linkedin.com/in/stanimirt" target="_blank" class="icon"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/user/stanimirtt" target="_blank" class="icon"><i class="fa fa-youtube"></i></a>
+                <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="icons">
-            <a href="https://www.facebook.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.google.com/+StanimirTodorov" target="_blank" class="icon"><i class="fa fa-google-plus"></i></a>
-            <a href="https://github.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-github"></i></a>
-            <a href="http://bg.linkedin.com/in/stanimirt" target="_blank" class="icon"><i class="fa fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/user/stanimirtt" target="_blank" class="icon"><i class="fa fa-youtube"></i></a>
-            <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
-        </div>
-    </footer>
-    <script>
-        var vid = document.getElementById("bgvid"),
-            pauseButton = document.getElementById("vidpause"),
-            boxerButton = document.getElementById("vidboxer"),
-            showboarderButton = document.getElementById("vidshowboarder");
-
-        function vidFade() {
-            vid.classList.add("stopfade");
-        }
-
-        function changeVid(videoElement, src) {
-            var sources = videoElement.getElementsByTagName('source');
-
-            videoElement.attributes.poster = src + ".jpg";
-
-            sources[0].src = src + ".mp4";
-            videoElement.load();
-
-            toggleVideo();
-            vid.classList.remove("stopfade");
-        }
-
-        function toggleVideo() {
-            vid.classList.toggle("stopfade");
-            
-            if (vid.paused) {
-                vid.play();
-                pauseButton.className = "fa fa-pause";
-            } else {
-                vid.pause();
-                pauseButton.className = "fa fa-play";
-            }
-        }
-
-        vid.addEventListener('ended', function() {
-            // only functional if "loop" is removed
-            vid.pause();
-            // to capture IE10
-            vidFade();
-        });
-
-        pauseButton.addEventListener("click", function() {
-            toggleVideo();
-            return false;
-        });
-
-        boxerButton.addEventListener("click", function() {
-            changeVid(vid, "boxing");
-
-            return false;
-        });
-
-        showboarderButton.addEventListener("click", function() {
-            changeVid(vid, "snowboarding");
-
-            return false;
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
