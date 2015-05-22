@@ -2,18 +2,18 @@
 
 @font-face {
 	font-family:"webbatka";
-	src:url("webbatka.eot");
+	src:url("../fonts/webbatka.eot");
 	font-weight:normal;
 	font-style:normal;
 }
 
 @font-face {
 	font-family:"webbatka";
-	src:url("webbatka.eot");
-	src:url("webbatka.eot?#iefix") format("embedded-opentype"),
-		url("webbatka.woff") format("woff"),
-		url("webbatka.ttf") format("truetype"),
-		url("webbatka.svg?#webbatka") format("svg");
+	src:url("../fonts/webbatka.eot");
+	src:url("../fonts/webbatka.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/webbatka.woff") format("woff"),
+		url("../fonts/webbatka.ttf") format("truetype"),
+		url("../fonts/webbatka.svg?#webbatka") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
