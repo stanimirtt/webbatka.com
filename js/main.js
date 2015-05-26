@@ -31,15 +31,19 @@ function toggleVideo() {
     }
 }
 
-vid.addEventListener('progress', function (e) {
-    if(e.total && e.loaded) {
-        // percentage of video loaded
-        var proportion = Math.round( e.loaded / e.total );
-        console.log(proportion * 100);
-        return proportion * 100; 
-    } else {  
-        // do nothing because we're autobuffering.
-    }
+function loaded()
+{
+    var r = vid.buffered;
+    var total = vid.duration;
+
+    var start = r.start(0);
+    var end = r.end(0);
+
+   console.log((end/total)*100);      
+}   
+
+vid.addEventListener('progress', function() {
+    loaded();
 });
 
 vid.addEventListener('ended', function() {
