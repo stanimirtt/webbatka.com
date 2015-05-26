@@ -31,6 +31,17 @@ function toggleVideo() {
     }
 }
 
+vid.addEventListener('progress', function (e) {
+    if(e.total && e.loaded) {
+        // percentage of video loaded
+        var proportion = Math.round( e.loaded / e.total );
+        console.log(proportion * 100);
+        return proportion * 100; 
+    } else {  
+        // do nothing because we're autobuffering.
+    }
+});
+
 vid.addEventListener('ended', function() {
     // only functional if "loop" is removed
     vid.pause();

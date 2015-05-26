@@ -24,9 +24,8 @@ html, body {
 }
 
 .container {
-    background: #A4B1C4;
+    background: rgba(164, 177, 196, 0.7);
     float: right;
-    opacity: .7;
     width: 36.2%;
     height: auto;
     min-width: 36.2%; 
@@ -96,7 +95,7 @@ nav li {
                 -ms-transform: scale(0.5);
             }
 
-.button .icon {
+.button .icon, .coding {
     padding: 3%;
 }
 
@@ -126,7 +125,7 @@ footer {
 }
 
 footer .icons {
-    width: 42%;
+    width: 36.2%;
     margin: 0 auto;
     padding: 0 0 1% 0;
 }
