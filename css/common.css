@@ -36,7 +36,7 @@ html, body {
 
 #logo {
     width: 61.8%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 nav {
@@ -403,3 +403,19 @@ video#bgvid {
                 -moz-transform: scale(0.5);
                 -ms-transform: scale(0.5);
             }
+
+/* Video loader */
+#loader {
+    background: #B193FB;
+    height: 3px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 33%;
+    z-index: 9999;
+    display: none;
+    transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s; 
+    -o-transition: width 1s;
+}

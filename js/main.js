@@ -13,6 +13,8 @@ function changeVid(videoElement, src) {
     videoElement.attributes.poster = "posters/" + src + ".jpg";
 
     sources[0].src = "videos/" + src + ".mp4";
+    loader.style.width = "50%";
+    loader.style.display = "block";
     videoElement.load();
 
     toggleVideo();
@@ -31,20 +33,15 @@ function toggleVideo() {
     }
 }
 
-function loaded()
-{
-    var r = vid.buffered;
-    var total = vid.duration;
-
-    var start = r.start(0);
-    var end = r.end(0);
-
-   console.log((end/total)*100);      
-}   
-
-vid.addEventListener('progress', function() {
-    loaded();
-});
+vid.addEventListener("loadeddata", function() {
+    var loader = document.getElementById("loader");
+    setTimeout(function () {
+        loader.style.width = "100%";
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 1000);
+    }, 1000);
+}, false);
 
 vid.addEventListener('ended', function() {
     // only functional if "loop" is removed
