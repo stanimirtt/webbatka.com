@@ -149,7 +149,7 @@ video#bgvid {
     z-index: -100;
     background: url(snowboarding.jpg) no-repeat;
     background-size: cover;
-    -webkit-filter: blur(8px);
+    -webkit-filter: blur(2px);
 }
 
 video#bgvid { 

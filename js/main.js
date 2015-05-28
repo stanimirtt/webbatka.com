@@ -1,7 +1,8 @@
 var vid = document.getElementById("bgvid"),
     pauseButton = document.getElementById("vidpause"),
     boxerButton = document.getElementById("vidboxer"),
-    showboarderButton = document.getElementById("vidshowboarder");
+    snowboarderButton = document.getElementById("vidsnowboarder"),
+    coderButton = document.getElementById("vidcoder");
 
 function vidFade() {
     vid.classList.add("stopfade");
@@ -12,13 +13,16 @@ function changeVid(videoElement, src) {
 
     videoElement.attributes.poster = "posters/" + src + ".jpg";
 
-    sources[0].src = "videos/" + src + ".mp4";
-    loader.style.width = "50%";
-    loader.style.display = "block";
-    videoElement.load();
+    if (sources.length) {
+        // I love JavaScript! :)))
+        sources[0].src = "videos/" + src + ".mp4";
+        loader.style.width = "50%";
+        loader.style.display = "block";
+        videoElement.load();
 
-    toggleVideo();
-    vid.classList.remove("stopfade");
+        toggleVideo();
+        vid.classList.remove("stopfade");
+    }
 }
 
 function toggleVideo() {
@@ -61,8 +65,14 @@ boxerButton.addEventListener("click", function() {
     return false;
 });
 
-showboarderButton.addEventListener("click", function() {
+snowboarderButton.addEventListener("click", function() {
     changeVid(vid, "snowboarding");
+
+    return false;
+});
+
+coderButton.addEventListener("click", function() {
+    changeVid(vid, "coding");
 
     return false;
 });
