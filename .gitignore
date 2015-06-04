@@ -43,4 +43,4 @@ Temporary Items
 .apdisk
 
 # FTPSync settings file
-.settings
+*.settings
