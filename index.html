@@ -48,7 +48,9 @@
 <body>
     <div id="loader"></div>
     <video autoplay loop poster="posters/boxing.jpg" id="bgvid" muted>
-        <source src="videos/boxing.mp4" type="video/mp4">
+        <source src="videos/boxing.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        <source src="videos/boxing.webm" type='video/webm; codecs="vp8, vorbis"' />
+        <source src="videos/boxing.ogv" type='video/ogg; codecs="theora, vorbis"' />
     </video>
     <div class="controls">
         <a href="#"><i class="fa fa-pause" id="vidpause"></i></a>

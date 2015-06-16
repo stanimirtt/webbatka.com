@@ -11,11 +11,14 @@ function vidFade() {
 function changeVid(videoElement, src) {
     var sources = videoElement.getElementsByTagName('source');
 
-    videoElement.attributes.poster = "posters/" + src + ".jpg";
+    videoElement.poster = "posters/" + src + ".jpg";
 
     if (sources.length) {
         // I love JavaScript! :)))
         sources[0].src = "videos/" + src + ".mp4";
+        sources[1].src = "videos/" + src + ".webm";
+        sources[2].src = "videos/" + src + ".ogv";
+
         loader.style.width = "50%";
         loader.style.display = "block";
         videoElement.load();
