@@ -191,11 +191,6 @@ iPad 3
         display: none;
     }
 
-    #logo {
-        width: 31.8%;
-        margin: 70px auto;
-    }
-
     footer {
         width: 100%;
     }
@@ -250,16 +245,12 @@ iPad 3
     /* Styles */
     footer .icons {
         padding: 0;
-        width: 39%;
+        width: 52%;
     }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
     /* Styles */
-    footer .icons {
-        padding: 0;
-        width: 70%;
-    }
 }
 
 /* Samsung Galaxy S4 ----------- */
