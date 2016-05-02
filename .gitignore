@@ -44,3 +44,7 @@ Temporary Items
 
 # FTPSync settings file
 *.settings
+
+# Sublime Project
+webbatka.com
+webbatka.sublime-workspace
