@@ -57,24 +57,33 @@ vid.addEventListener('ended', function() {
     vidFade();
 });
 
-pauseButton.addEventListener("click", function() {
+pauseButton.addEventListener("click", function(ev) {
+    ev.preventDefault();
+
     toggleVideo();
+    
     return false;
 });
 
-boxerButton.addEventListener("click", function() {
+boxerButton.addEventListener("click", function(ev) {
+    ev.preventDefault();
+
     changeVid(vid, "boxing");
 
     return false;
 });
 
-snowboarderButton.addEventListener("click", function() {
+snowboarderButton.addEventListener("click", function(ev) {
+    ev.preventDefault();
+
     changeVid(vid, "snowboarding");
 
     return false;
 });
 
-coderButton.addEventListener("click", function() {
+coderButton.addEventListener("click", function(ev) {
+    ev.preventDefault();
+
     changeVid(vid, "coding");
 
     return false;

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html itemtype="http://schema.org/Person">
+<html lang="en" itemtype="http://schema.org/Person">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Meta tags -->
     <title>Web Batka = Boxing + Snowboarding + Coding</title>
 
@@ -22,8 +25,11 @@
     <meta itemprop="image" content="http://webbatka.com/images/webbatka.png">
 
     <!-- Styles -->
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/common.css" type="text/css" />
-    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="css/webbatka.css" type="text/css" />
 
     <!-- Favicons -->
@@ -55,9 +61,19 @@
     <div class="controls">
         <a href="#"><i class="fa fa-pause" id="vidpause"></i></a>
     </div>
-    <div class="container">
-        <header>
-            <div id="logo">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" 
+                data-toggle="collapse" data-target="#navbar" 
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="logo">
                 <div class="punch-animation">
                     <div class="rounded-rect"></div>
                     <div class="rounded-rect smaller"></div>
@@ -67,29 +83,41 @@
                 <h1 class="text">web batka</h1>
             </div>
             <div class="clear"></div>
-        </header>
-        <nav>
-            <span class="nav-hint">load another video</span>
-            <ul>
-                <li id="vidboxer" class="button"><a href="#"><i class="icon icon_boxer"></i> boxing</a></li>
-                <li id="vidsnowboarder" class="button"><a href="#"><i class="icon icon_extreme1"></i> snowboarding</a></li>
-            	<li id="vidcoder" class="button"><a href="#"><i class="fa fa-code coding"></i> coding</a></li>
-            </ul>
-        </nav>
-        <article>
-            <p>I am a Software Development Team Lead at Infragistics. JavaScript is my main passion, particularly leading development of front-end components. I also have a full stack experience in ASP.NET MVC and PHP. I got started with web development at age 20 in a software company in Sofia, BG, and went on to study Informatics at FMI. I currently live in Sofia.</p>
-        </article>
-        <footer>
-            <div class="icons">
-                <a href="https://www.facebook.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.google.com/+StanimirTodorov" target="_blank" class="icon"><i class="fa fa-google-plus"></i></a>
-                <a href="https://github.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-github"></i></a>
-                <a href="http://bg.linkedin.com/in/stanimirt" target="_blank" class="icon"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/user/stanimirtt" target="_blank" class="icon"><i class="fa fa-youtube"></i></a>
-                <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" 
+            style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li id="vidboxer" class="button">
+                <a href="#"><i class="icon icon_boxer"></i> boxing</a>
+            </li>
+            <li id="vidsnowboarder" class="button">
+                <a href="#"><i class="icon icon_extreme1"></i> snowboarding</a>
+            </li>
+            <li id="vidcoder" class="button">
+                <a href="#"><i class="fa fa-code coding"></i> coding</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <aside class="sticky-social">
+        <div class="icons">
+            <a href="https://www.facebook.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.google.com/+StanimirTodorov" target="_blank" class="icon"><i class="fa fa-google-plus"></i></a>
+            <a href="https://github.com/stanimirtt" target="_blank" class="icon"><i class="fa fa-github"></i></a>
+            <a href="http://bg.linkedin.com/in/stanimirt" target="_blank" class="icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/user/stanimirtt" target="_blank" class="icon"><i class="fa fa-youtube"></i></a>
+            <a href="mailto:stanimir.todorof@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
+        </div>
+    </aside>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
